@@ -1,5 +1,7 @@
 import 'package:ecommerceapp_2/provider/cartProvider.dart';
 import 'package:ecommerceapp_2/provider/productsProvider.dart';
+import 'package:ecommerceapp_2/screens/main_tab_scaffold.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -19,6 +21,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return CupertinoApp(
+      debugShowCheckedModeBanner: false,
+      home: MainTabScaffold(),
+    );
   }
 }
