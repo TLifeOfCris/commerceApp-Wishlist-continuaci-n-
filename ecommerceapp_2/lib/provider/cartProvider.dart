@@ -40,5 +40,6 @@ class Cartprovider extends ChangeNotifier{
     }else {
       removeFromCart(product);
     }
+    notifyListeners();
   }
 }
