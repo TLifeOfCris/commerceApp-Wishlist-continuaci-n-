@@ -9,7 +9,7 @@ class Cartprovider extends ChangeNotifier{
 
   bool contains(Product product) => _items.any((item) => 
   item.product.id == product.id);
-
+  //Añadir al carrito
   void addToCart(Product product){
     final index = _items.indexWhere((item) => item.product.id == product.id);
 
@@ -18,6 +18,13 @@ class Cartprovider extends ChangeNotifier{
     } else {
       _items[index].quantity++;
     }
+    notifyListeners();
+  }
+
+  //Eliminar producto de carrito
+  void removeFromCart(Product product){
+    _items.removeWhere(
+      (item) => item.product.id == product.id);
     notifyListeners();
   }
 }
