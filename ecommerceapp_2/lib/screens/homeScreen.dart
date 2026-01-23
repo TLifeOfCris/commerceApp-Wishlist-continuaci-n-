@@ -1,4 +1,5 @@
 import 'package:ecommerceapp_2/widgets/product_grid.dart';
+import 'package:ecommerceapp_2/widgets/promo_banner.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,7 @@ class Homescreen extends StatelessWidget {
       ),
       child: SafeArea(child: Column(
         children: [
+          PromoBanner(text: 'Holi'),
           //PROMO BANNER
           Expanded(child: ProductGrid())
         ],
