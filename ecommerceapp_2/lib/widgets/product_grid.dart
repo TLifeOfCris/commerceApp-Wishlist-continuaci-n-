@@ -24,3 +24,7 @@ class ProductGrid extends StatelessWidget {
         });
   }
 }
+
+//EL BANNER NO DEPENDE DEL GRID
+//EL GRID NO DEPENDE DEL BANNER
+//HOMESCREEN SOLO LOS COMPONE
