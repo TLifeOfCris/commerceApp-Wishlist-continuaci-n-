@@ -1,3 +1,4 @@
+import 'package:ecommerceapp_2/widgets/product_grid.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -8,9 +9,14 @@ class Homescreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
-        middle: Text('Home'),
+        middle: Text('Commerce App'),
       ),
-      child: Center(
-        child: Text('Home Screen'),));
+      child: SafeArea(child: Column(
+        children: [
+          //PROMO BANNER
+          Expanded(child: ProductGrid())
+        ],
+      ))
+        );
   }
 }
