@@ -1,7 +1,7 @@
 import 'package:ecommerceapp_2/models/productModel.dart';
 
 class CartItem {
-  final Product product;
+  final String product;
   final String productId;
   int quantity;
 
