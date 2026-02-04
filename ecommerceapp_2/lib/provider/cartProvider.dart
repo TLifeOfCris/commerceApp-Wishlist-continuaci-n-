@@ -25,8 +25,10 @@ class Cartprovider extends ChangeNotifier{
 
   //Eliminar producto de carrito
   void removeFromCart(Product product){
+    //QUITAR PRODUCTO POR PRODUCT ID
     _items.removeWhere(
-      (item) => item.product.id == product.id);
+      (key, cartItem) => cartItem.productId == product.id
+    );
     notifyListeners();
   }
 
