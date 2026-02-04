@@ -23,6 +23,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoApp(
       debugShowCheckedModeBanner: false,
+      //MainTabScaffold es el que tiene al HomeScreen y otras pantallas
+      
       home: MainTabScaffold(),
     );
   }
