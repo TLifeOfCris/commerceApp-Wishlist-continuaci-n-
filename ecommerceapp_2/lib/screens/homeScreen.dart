@@ -14,6 +14,7 @@ class Homescreen extends StatelessWidget {
       ),
       child: SafeArea(child: Column(
         children: [
+          //Aqui cambiar con remote config
           PromoBanner(text: 'Holi'),
           //PROMO BANNER
           Expanded(child: ProductGrid())
