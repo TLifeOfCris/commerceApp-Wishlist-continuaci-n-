@@ -14,6 +14,7 @@ class Cartprovider extends ChangeNotifier{
   void addToCart(Product product){
     //Aqui pregunta si el producto ya está en el carrito
     if (_items.containsKey(product.id)){
+      //Si existe accede directo al item porque y sabe que existe y aumenta cantidad
       _items[product.id]!.quantity++;
     } else {
       _items[product.id] = CartItem(productId: 
