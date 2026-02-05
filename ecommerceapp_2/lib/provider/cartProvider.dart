@@ -6,10 +6,11 @@ class Cartprovider extends ChangeNotifier{
   //String es el PRODUCT ID y el CartItem el objeto dentro del caarrito 
   final Map<String, CartItem> _items = {};
 
-  List<CartItem> get items => _items;
+  List<CartItem> get items => _items.values.toList();
 
-  bool contains(Product product) => _items.any((item) => 
-  item.product.id == product.id);
+  bool contains(Product product){
+    return _items.containsKey(product.id);
+  }
   //Añadir al carrito
   void addToCart(Product product){
     //Aqui pregunta si el producto ya está en el carrito
