@@ -18,7 +18,7 @@ class Cartprovider extends ChangeNotifier{
       _items[product.id]!.quantity++;
     } else {
       _items[product.id] = CartItem(productId: 
-      product.id, product: product.title);
+      product.id, product: product.title, price: product.price);
     }
     notifyListeners();
   }
@@ -42,5 +42,6 @@ class Cartprovider extends ChangeNotifier{
     notifyListeners();
   }
 
-  double get totalPrice => _items.fold(0, (sum, item) => sum + item.product.price * item.quantity);
+  double get totalPrice => _items.values.fold(0, (sum, item) => sum + item.price * item.quantity,
+  );
 }
