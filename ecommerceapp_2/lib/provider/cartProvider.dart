@@ -30,17 +30,14 @@ class Cartprovider extends ChangeNotifier{
     notifyListeners();
   }
 
-  void decreaseQuantiy (Product product){
-    final index = 
-    _items.indexWhere((item) => item.product.id == product.id);
+  void decreaseQuantity(Product product){
+    if (!_items.containsKey(product.id)) return;
+    final cartItem = _items[product.id]!;
 
-    if (index == -1) return ;
-
-    if (_items[index].quantity > 1){
-      _items[index].quantity--;
-
-    }else {
-      removeFromCart(product);
+    if (cartItem.quantity > 1){
+      cartItem.quantity--;
+    } else {
+      _items.remove(product.id);
     }
     notifyListeners();
   }
