@@ -1,4 +1,4 @@
-import 'package:ecommerceapp_2/models/productModel.dart';
+
 
 class CartItem {
   final String product;
