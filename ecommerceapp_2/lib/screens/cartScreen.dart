@@ -15,6 +15,13 @@ class CartScreen extends StatelessWidget {
         child: Text('Cart its empty'),
       ) : Column(
 
+        children: [
+          Expanded(child: ListView.separated(
+            itemBuilder: (context, index){
+              final item = items[index];
+            }, separatorBuilder: (_,__) => const Divider(height: 1,), itemCount: items.length))
+        ],
+
       )),
     );
   }
