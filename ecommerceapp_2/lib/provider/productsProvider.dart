@@ -1,7 +1,7 @@
 import 'package:ecommerceapp_2/models/productModel.dart';
 import 'package:flutter/material.dart';
 
-class Productsprovider extends ChangeNotifier{
+class ProductsProvider extends ChangeNotifier{
   final List<Product> _products = [
     Product(
     id: '1', 
