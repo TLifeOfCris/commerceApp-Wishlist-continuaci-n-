@@ -35,7 +35,11 @@ class ProductGrid extends StatelessWidget {
                   //  AQUÍ VA EL TITULO DEL PRODUCTO
                   Text(product.title),
                   //  AQUÍ VA EL PRECIO DEL PRODUCTO
-                  Text('\$${product.price}')
+                  Text('\$${product.price}'),
+                  // BOTÓN DE LIKE 
+                  IconButton(onPressed: (){
+                    productsProvider.toggleLike(product.id);
+                  }, icon: Icon(product.isLiked ? Icons.favorite : Icons.favorite_border))
                 ],
               ),
             );
