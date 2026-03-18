@@ -1,3 +1,4 @@
+import 'package:ecommerceapp_2/screens/cartBadge.dart';
 import 'package:ecommerceapp_2/widgets/product_grid.dart';
 import 'package:ecommerceapp_2/widgets/promo_banner.dart';
 import 'package:flutter/cupertino.dart';
@@ -11,6 +12,12 @@ class Homescreen extends StatelessWidget {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
         middle: Text('Commerce App'),
+        trailing: GestureDetector(
+          onTap: (){
+            //ABRIR CART SCREEN
+          },
+          child: const CartBadge(),
+        ),
       ),
       child: SafeArea(child: Column(
         children: [
