@@ -39,6 +39,8 @@ class ProductGrid extends StatelessWidget {
                   Text(product.title),
                   //  AQUÍ VA EL PRECIO DEL PRODUCTO
                   Text('\$${product.price}'),
+                  //DESCRIPCIÓN DE PRODUCTO FALTA AGREGARLE QUE SOLO PUEDA MOSTRAR UNA PARTE DE DICHA APRA QUE NO CRASHE O SE VEA FEO 
+                  Text(product.description),
                   // BOTÓN DE LIKE 
 
                   //Agregar un row
