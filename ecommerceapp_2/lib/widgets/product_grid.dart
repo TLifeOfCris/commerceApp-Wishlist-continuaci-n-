@@ -39,7 +39,11 @@ class ProductGrid extends StatelessWidget {
                   // BOTÓN DE LIKE 
                   IconButton(onPressed: (){
                     productsProvider.toggleLike(product.id);
-                  }, icon: Icon(product.isLiked ? Icons.favorite : Icons.favorite_border))
+                  }, icon: Icon(product.isLiked ? Icons.favorite : Icons.favorite_border)),
+                  // AÑADIR A CARRITO
+                  IconButton(onPressed: (){
+                    //Agregar CARTPROVIDER
+                  }, icon: Icon(Icons.add))
                 ],
               ),
             );
