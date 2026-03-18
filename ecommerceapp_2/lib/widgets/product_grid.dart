@@ -41,9 +41,10 @@ class ProductGrid extends StatelessWidget {
                   Text('\$${product.price}'),
                   //DESCRIPCIÓN DE PRODUCTO FALTA AGREGARLE QUE SOLO PUEDA MOSTRAR UNA PARTE DE DICHA APRA QUE NO CRASHE O SE VEA FEO 
                   Text(product.description),
-                  // BOTÓN DE LIKE 
+                  
 
                   //Agregar un row
+                  // BOTÓN DE LIKE 
                   Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                     IconButton(onPressed: (){
