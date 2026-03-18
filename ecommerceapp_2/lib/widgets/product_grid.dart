@@ -1,6 +1,7 @@
 
 // TODO 
 // AGREGAR CARTPROVIDER AL BOTON DE CARRITO 
+import 'package:ecommerceapp_2/provider/cartProvider.dart';
 import 'package:ecommerceapp_2/provider/productsProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -52,6 +53,7 @@ class ProductGrid extends StatelessWidget {
                     icon: Icon(product.isLiked ? Icons.favorite : Icons.favorite_border)),
                   // AÑADIR A CARRITO
                     IconButton(onPressed: (){
+                      context.read<Cartprovider>().addToCart(product);
                     //Agregar CARTPROVIDER
                   }, icon: Icon(Icons.add))
                     ],
