@@ -40,13 +40,20 @@ class ProductGrid extends StatelessWidget {
                   //  AQUÍ VA EL PRECIO DEL PRODUCTO
                   Text('\$${product.price}'),
                   // BOTÓN DE LIKE 
-                  IconButton(onPressed: (){
-                    productsProvider.toggleLike(product.id);
-                  }, icon: Icon(product.isLiked ? Icons.favorite : Icons.favorite_border)),
+
+                  //Agregar un row
+                  Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                    IconButton(onPressed: (){
+                    productsProvider.toggleLike(product.id);}, 
+                    icon: Icon(product.isLiked ? Icons.favorite : Icons.favorite_border)),
                   // AÑADIR A CARRITO
-                  IconButton(onPressed: (){
+                    IconButton(onPressed: (){
                     //Agregar CARTPROVIDER
                   }, icon: Icon(Icons.add))
+                    ],
+                  )
+
                 ],
               ),
             );
