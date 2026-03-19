@@ -66,10 +66,17 @@ class ProductGrid extends StatelessWidget {
                         child: Text('${product.title} added',
                         style: TextStyle(color: CupertinoColors.white),),
                       ));
+
+                      //CAMBIAR ESTO
                       Future.delayed(const Duration(seconds: 1), (){
                         
                         Navigator.of(context).pop();
                       } );
+                      //CAMBIAR ESTO 
+
+
+
+                      
                     //Agregar CARTPROVIDER
                   }, icon: Icon(Icons.add))
                     ],
