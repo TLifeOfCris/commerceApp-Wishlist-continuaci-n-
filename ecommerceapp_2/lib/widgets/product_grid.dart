@@ -67,6 +67,7 @@ class ProductGrid extends StatelessWidget {
                         style: TextStyle(color: CupertinoColors.white),),
                       ));
                       Future.delayed(const Duration(seconds: 1), (){
+                        
                         Navigator.of(context).pop();
                       } );
                     //Agregar CARTPROVIDER
