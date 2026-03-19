@@ -18,7 +18,7 @@ class CartBadge extends StatelessWidget {
           right: -2,
           top: -2,
           child: Container(
-            padding: EdgeInsets.all(4), 
+            padding: EdgeInsets.symmetric( horizontal: 5, vertical: 2), 
             decoration: BoxDecoration(
           color: CupertinoColors.systemRed, 
           borderRadius: BorderRadius.circular(10),
