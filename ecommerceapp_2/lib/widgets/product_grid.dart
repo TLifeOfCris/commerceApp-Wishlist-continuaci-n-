@@ -3,6 +3,7 @@
 // AGREGAR CARTPROVIDER AL BOTON DE CARRITO 
 import 'package:ecommerceapp_2/provider/cartProvider.dart';
 import 'package:ecommerceapp_2/provider/productsProvider.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -55,6 +56,19 @@ class ProductGrid extends StatelessWidget {
                     IconButton(onPressed: (){
                       context.read<Cartprovider>().addToCart(product);
                       //Recordar usar SnackBar de ios 
+                      showCupertinoModalPopup(context: context, builder: (_) => Container(
+                        margin: const EdgeInsets.only(bottom: 50),
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: CupertinoColors.systemGrey.withOpacity(0.9),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Text('${product.title} added',
+                        style: TextStyle(color: CupertinoColors.white),),
+                      ));
+                      Future.delayed(const Duration(seconds: 1), (){
+                        Navigator.of(context).pop();
+                      } );
                     //Agregar CARTPROVIDER
                   }, icon: Icon(Icons.add))
                     ],
