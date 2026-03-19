@@ -12,11 +12,11 @@ class CartBadge extends StatelessWidget {
     return Stack(
       clipBehavior: Clip.none,
       children: [
-        const Icon(CupertinoIcons.cart),
+        const Icon(CupertinoIcons.cart, size: 28),
         if (cart.totalItems > 0) 
         Positioned(
-          right: -6,
-          left: -4,
+          right: -2,
+          top: -2,
           child: Container(
             padding: EdgeInsets.all(4), 
             decoration: BoxDecoration(
