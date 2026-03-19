@@ -54,6 +54,8 @@ class ProductGrid extends StatelessWidget {
                   // AÑADIR A CARRITO
                     IconButton(onPressed: (){
                       context.read<Cartprovider>().addToCart(product);
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('${product.title} has been added to the cart'), 
+                      duration: Duration(seconds: 1),),);
                     //Agregar CARTPROVIDER
                   }, icon: Icon(Icons.add))
                     ],
