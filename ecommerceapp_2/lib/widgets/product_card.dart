@@ -18,6 +18,23 @@ class ProductCard extends StatelessWidget {
             ),
         ]
       ),
+      padding: const EdgeInsets.all(12),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                color: CupertinoColors.systemGrey5,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Center(
+                child: Icon(CupertinoIcons.photo),
+              ),
+            )
+            )
+        ],
+      ),
     );
   }
 }
