@@ -45,6 +45,13 @@ class ProductCard extends StatelessWidget {
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             ),
+            const  SizedBox( height: 4,),
+
+            //PRICE
+            Text('\$${product.price}', 
+            style: TextStyle(color: CupertinoColors.systemGrey, 
+            fontSize: 13),
+            )
         ],
       ),
     );
