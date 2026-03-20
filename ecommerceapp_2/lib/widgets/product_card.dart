@@ -51,7 +51,20 @@ class ProductCard extends StatelessWidget {
             Text('\$${product.price}', 
             style: TextStyle(color: CupertinoColors.systemGrey, 
             fontSize: 13),
+            ),
+
+            const SizedBox( height: 8,),
+            // DAR LIKE Y AGREGAR A CARRITO BOTTONES
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Icon(product.isLiked 
+                ? CupertinoIcons.heart_fill 
+                : CupertinoIcons.heart,
+                color: CupertinoColors.systemRed,)
+              ],
             )
+
         ],
       ),
     );
