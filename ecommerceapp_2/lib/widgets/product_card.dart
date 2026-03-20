@@ -1,6 +1,9 @@
 import 'package:ecommerceapp_2/models/productModel.dart';
+import 'package:ecommerceapp_2/provider/cartProvider.dart';
+import 'package:ecommerceapp_2/utils/show_toast.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;
@@ -8,6 +11,7 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final cart = context.read<Cartprovider>();
     return Container(
       decoration: BoxDecoration(
         color: CupertinoColors.systemBackground,
@@ -58,10 +62,21 @@ class ProductCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Icon(product.isLiked 
-                ? CupertinoIcons.heart_fill 
-                : CupertinoIcons.heart,
-                color: CupertinoColors.systemRed,)
+                
+                GestureDetector(
+                  child: Icon(product.isLiked 
+                  ? CupertinoIcons.heart_fill 
+                  : CupertinoIcons.heart,
+                  color: CupertinoColors.systemRed,),
+                ),
+                GestureDetector(
+                  onTap: (){
+                    cart.addToCart(product);
+
+                    showiOSToast(context, '${product.title} has been addded to the cart');
+                  },
+                  child: const Icon(CupertinoIcons.cart_badge_plus),
+                )
               ],
             )
 
