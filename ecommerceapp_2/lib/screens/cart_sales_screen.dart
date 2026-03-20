@@ -24,3 +24,14 @@ class CartSalesScreen extends StatelessWidget {
     );
   }
 }
+
+
+class _CartItemRow extends StatelessWidget {
+  final dynamic item; 
+  const _CartItemRow({ required this.item});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
