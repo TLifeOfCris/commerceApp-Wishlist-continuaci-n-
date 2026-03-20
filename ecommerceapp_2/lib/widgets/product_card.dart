@@ -1,6 +1,8 @@
 import 'package:ecommerceapp_2/models/productModel.dart';
 import 'package:ecommerceapp_2/provider/cartProvider.dart';
+import 'package:ecommerceapp_2/provider/productsProvider.dart';
 import 'package:ecommerceapp_2/utils/show_toast.dart';
+import 'package:ecommerceapp_2/widgets/product_grid.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -64,6 +66,9 @@ class ProductCard extends StatelessWidget {
               children: [
                 
                 GestureDetector(
+                  onTap: () {
+                    context.read<ProductsProvider>().toggleLike(product.id);
+                  },
                   child: Icon(product.isLiked 
                   ? CupertinoIcons.heart_fill 
                   : CupertinoIcons.heart,
