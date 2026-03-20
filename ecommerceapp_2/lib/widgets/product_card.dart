@@ -1,8 +1,10 @@
+import 'package:ecommerceapp_2/models/productModel.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ProductCard extends StatelessWidget {
-  const ProductCard({super.key});
+  final Product product;
+  const ProductCard({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
@@ -31,8 +33,18 @@ class ProductCard extends StatelessWidget {
               child: Center(
                 child: Icon(CupertinoIcons.photo),
               ),
-            )
-            )
+            ),
+            ),
+            const SizedBox(height: 8,),
+
+            //TITULO 
+            Text(product.title, style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 14
+            ),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            ),
         ],
       ),
     );
